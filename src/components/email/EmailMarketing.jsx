@@ -6,12 +6,14 @@ import ContactsTab from './ContactsTab'
 import CampaignsTab from './CampaignsTab'
 import MetricsTab from './MetricsTab'
 import TemplatesTab from './TemplatesTab'
+import MyProgressTab from './MyProgressTab'
 
 const TABS = [
   { id: 'contacts',  label: '👥 Επαφές' },
   { id: 'campaigns', label: '📧 Καμπάνιες' },
   { id: 'templates', label: '🎨 Templates' },
   { id: 'metrics',   label: '📊 Μετρικά' },
+  { id: 'progress',  label: '🚀 My Progress' },
 ]
 
 function fmtSync(ts) {
@@ -159,6 +161,7 @@ export default function EmailMarketing() {
       {tab === 'campaigns' && <CampaignsTab />}
       {tab === 'templates' && <TemplatesTab />}
       {tab === 'metrics'   && <MetricsTab contacts={contacts} />}
+      {tab === 'progress'  && <MyProgressTab />}
     </div>
   )
 }
